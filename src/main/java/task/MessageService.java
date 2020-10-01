@@ -16,7 +16,7 @@ public class MessageService {
         for (IChannel channel : message.channels) {
             attachments = attachmentFilter.filterOutAttachments(channel, message.attachments);
 
-            channel.receiveMessage(message, attachments);
+            channel.sendMessage(message, attachments);
         }
 
         System.out.println("Sending a message finished success");

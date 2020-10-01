@@ -1,9 +1,9 @@
 package task;
 
-import java.util.ArrayList;
+public abstract class IChannel {
 
-public interface IChannel {
+     public void sendMessage(Message message) {
 
-    void receiveMessage(Message message, ArrayList<IAttachment> attachments);
+     }
 
 }
