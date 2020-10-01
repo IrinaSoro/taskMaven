@@ -1,11 +1,9 @@
 package task;
 
-import java.util.ArrayList;
-
-public class SmsChannel implements IChannel {
+public class SmsChannel extends AttachmentFilter {
 
     @Override
-    public void sendMessage(Message message, ArrayList<IAttachment> attachments) {
-
+    public void sendMessage(Message message) {
+        super.sendMessage(message);
     }
 }

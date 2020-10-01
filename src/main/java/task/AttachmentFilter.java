@@ -1,9 +1,6 @@
 package task;
 
-import java.util.ArrayList;
-import java.util.stream.Collectors;
-
-public class AttachmentFilter implements IAttachmentFilter {
+public class AttachmentFilter {
     FacebookChannel facebookChannel = new FacebookChannel();
     EmailChannel emailChannel = new EmailChannel();
     SmsChannel smsChannel = new SmsChannel();
@@ -46,23 +43,29 @@ public class AttachmentFilter implements IAttachmentFilter {
         System.out.println("Any attachments are not acceptable");
     }
 
-    @Override
-    public ArrayList<IAttachment> filterOutAttachments(IChannel channel, ArrayList<IAttachment> attachments) {
-
-        if (channel instanceof FacebookChannel) {
-            return (ArrayList<IAttachment>) attachments.stream()
-                    .filter(a -> a instanceof Document ||
-                            a instanceof Picture).collect(Collectors.toList());
-
-        } else if (channel instanceof EmailChannel) {
-            return attachments;
-        } else if (channel instanceof SmsChannel) {
-            return null;
-        } else {
-            return null;
-        }
-
+    public void sendMessage(Message message) {
+        message.getTime();
+        message.getSender_name();
+        message.getChannels();
+        message.getAttachments();
     }
+//    @Override
+//    public ArrayList<IAttachment> filterOutAttachments(IChannel channel, ArrayList<IAttachment> attachments) {
+//
+//        if (channel instanceof FacebookChannel) {
+//            return (ArrayList<IAttachment>) attachments.stream()
+//                    .filter(a -> a instanceof Document ||
+//                            a instanceof Picture).collect(Collectors.toList());
+//
+//        } else if (channel instanceof EmailChannel) {
+//            return attachments;
+//        } else if (channel instanceof SmsChannel) {
+//            return null;
+//        } else {
+//            return null;
+//        }
+//
+//    }
 
 
     enum AttachmentType {

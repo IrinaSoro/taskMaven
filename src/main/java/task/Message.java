@@ -10,7 +10,7 @@ public class Message {
         private String sender_name;
         private LocalTime time;
         private String text;
-        private ArrayList<IAttachment> attachments;
+        private ArrayList<AttachmentFilter.AttachmentType> attachments;
         private ArrayList<IChannel> channels;
 }
 
