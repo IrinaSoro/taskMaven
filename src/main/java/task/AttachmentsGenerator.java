@@ -13,10 +13,7 @@ public class AttachmentsGenerator {
         at.add(doc);
         at.add(pic);
         at.add(sound);
-        for (Attachment a : at) {
-            System.out.println(a.toString());
 
-        }
         return at;
 
     }
