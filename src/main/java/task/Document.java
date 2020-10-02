@@ -1,26 +1,17 @@
 package task;
 
-public class Document implements IAttachment {
+import lombok.Data;
+
+@Data
+public class Document extends Attachments {
     private String name;
 
     private String documentType;
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
+    public Document(String name, String documentType) {
         this.name = name;
-    }
-
-    public String getDocumentType() {
-        return documentType;
-    }
-
-    public void setDocumentType(String documentType) {
         this.documentType = documentType;
-
     }
+
+
 }

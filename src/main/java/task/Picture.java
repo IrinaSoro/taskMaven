@@ -1,24 +1,16 @@
 package task;
 
-public class Picture implements IAttachment {
+import lombok.Data;
+
+@Data
+public class Picture extends Attachments {
     private String name;
     private String pictureType;
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
+    public Picture(String name, String pictureType) {
         this.name = name;
-    }
-
-    public String getPictureType() {
-        return pictureType;
-    }
-
-    public void setPictureType(String pictureType) {
         this.pictureType = pictureType;
     }
+
+
 }

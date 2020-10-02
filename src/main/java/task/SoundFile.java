@@ -1,25 +1,16 @@
 package task;
 
-public class SoundFile implements IAttachment {
-    private String name;
+import lombok.Data;
 
+@Data
+public class SoundFile extends Attachments {
+    private String name;
     private long playTime;
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
+    public SoundFile(String name, long playTime) {
         this.name = name;
-    }
-
-    public long getPlayTime() {
-        return playTime;
-    }
-
-    public void setPlayTime(long playTime) {
         this.playTime = playTime;
     }
+
+
 }
