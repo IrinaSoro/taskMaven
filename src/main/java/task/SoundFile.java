@@ -3,7 +3,7 @@ package task;
 import lombok.Data;
 
 @Data
-public class SoundFile extends Attachments {
+public class SoundFile implements Attachment {
     private String name;
     private long playTime;
 

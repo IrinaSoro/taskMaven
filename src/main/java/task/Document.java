@@ -3,7 +3,7 @@ package task;
 import lombok.Data;
 
 @Data
-public class Document extends Attachments {
+public class Document implements Attachment {
     private String name;
 
     private String documentType;
