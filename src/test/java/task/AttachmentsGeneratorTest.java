@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class AttachmentsGeneratorTest {
     @Test
-    void negativeNum() throws IOException {
+    void throwsExceptionOnNegativeAttachmentsNumber() throws IOException {
         AttachmentsGenerator generator = new AttachmentsGenerator();
         int atNumber = -1;
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
@@ -21,7 +21,7 @@ class AttachmentsGeneratorTest {
     }
 
     @Test
-    void number() {
+    void checkSizeOfOutputList() {
         AttachmentsGenerator generator = new AttachmentsGenerator();
         int atNumber = 5;
         List<Attachment> res = generator.generate(atNumber);
@@ -30,7 +30,7 @@ class AttachmentsGeneratorTest {
     }
 
     @Test
-    void instance() {
+    void checkInstanceOfFirstElement() {
         AttachmentsGenerator generator = new AttachmentsGenerator();
         int atNumber = 3;
         List<Attachment> res = generator.generate(atNumber);
@@ -40,7 +40,7 @@ class AttachmentsGeneratorTest {
     }
 
     @Test
-    void instanceOf() {
+    void checkElementsComposition() {
         AttachmentsGenerator generator = new AttachmentsGenerator();
         int atNumber = 5;
         List<Attachment> res = generator.generate(atNumber);
