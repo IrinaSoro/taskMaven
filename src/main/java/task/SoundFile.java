@@ -12,5 +12,7 @@ public class SoundFile implements Attachment {
         this.playTime = playTime;
     }
 
+    public SoundFile() {
+    }
 
 }

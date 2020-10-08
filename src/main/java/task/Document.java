@@ -13,5 +13,8 @@ public class Document implements Attachment {
         this.documentType = documentType;
     }
 
+    public Document() {
+    }
+
 
 }

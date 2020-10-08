@@ -12,5 +12,7 @@ public class Picture implements Attachment {
         this.pictureType = pictureType;
     }
 
+    public Picture() {
+    }
 
 }
