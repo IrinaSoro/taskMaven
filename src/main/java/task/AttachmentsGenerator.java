@@ -16,7 +16,6 @@ public class AttachmentsGenerator {
             at.add(new Picture());
             at.add(new SoundFile());
 
-            System.out.println(at.get(i));
         }
 //        Document doc = new Document("name", "doc");
 //        Picture pic = new Picture("pic", "jpg");

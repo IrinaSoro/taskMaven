@@ -26,7 +26,7 @@ class AttachmentsGeneratorTest {
         int atNumber = 5;
         List<Attachment> res = generator.generate(atNumber);
         //проверка результата
-        assertEquals(5, res.size());
+        assertEquals(15, res.size());
     }
 
     @Test
