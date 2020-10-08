@@ -50,5 +50,6 @@ class AttachmentsGeneratorTest {
         assertTrue(res.get(2) instanceof SoundFile);
         assertTrue(res.get(3) instanceof Document);
         assertTrue(res.get(4) instanceof Picture);
+        assertEquals(15, res.size());
     }
 }
