@@ -13,8 +13,9 @@ class AttachmentsGeneratorTest {
     @Test
     void negativeNum() throws IOException {
         AttachmentsGenerator generator = new AttachmentsGenerator();
+        int atNumber = -1;
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            generator.generate(-1);
+            generator.generate(atNumber);
         });
 
     }
