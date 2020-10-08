@@ -32,10 +32,11 @@ class AttachmentsGeneratorTest {
     @Test
     void instance() {
         AttachmentsGenerator generator = new AttachmentsGenerator();
-        int atNumber = 1;
+        int atNumber = 3;
         List<Attachment> res = generator.generate(atNumber);
         //проверка результата
         assertTrue(res.get(0) instanceof Document);
+        assertEquals(9, res.size());
     }
 
     @Test
